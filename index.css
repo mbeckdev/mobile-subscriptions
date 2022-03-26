@@ -1,0 +1,181 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~ css sections ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~ title and description section  ~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ plans section  ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~ buttons section  ~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+  --bg-color-primary: #f3f3f7;
+  --text-color-primary: #202240;
+  --color3: #9633cc;
+  --button-bgcolor-primary: #9494a3;
+  --plan-bgcolor-primary: #fff;
+  --plan-bgcolor-secondary-1: #fffbec;
+  --plan-bgcolor-secondary-2: #f9ecff;
+  --plan-bgcolor-secondary-3: #eceeff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+body,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~ title and description section start ~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+h1 {
+  font-family: 'Merriweather', serif;
+  width: 550px;
+  text-align: center;
+}
+
+.subscriptions-description {
+  text-align: center;
+  width: 700px;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~ title and description section end ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ plans section start ~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#plan__background-box-1 {
+  background-color: var(--plan-bgcolor-secondary-1);
+}
+#plan__background-box-2 {
+  background-color: var(--plan-bgcolor-secondary-2);
+}
+#plan__background-box-3 {
+  background-color: var(--plan-bgcolor-secondary-3);
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 285px;
+  height: 326px;
+  border-radius: 14px;
+  padding: 40px;
+  font-size: 0.875rem;
+
+  background-color: var(--plan-bgcolor-primary);
+  margin: 0 40px;
+}
+
+.plan__add-subscription-button-container {
+  position: relative;
+}
+
+.plan__add-subscription-button {
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+  font-size: 1rem;
+  background-color: var(--bg-color-primary);
+  border: none;
+  width: 185px;
+  height: 50px;
+  z-index: 10;
+}
+
+.plan__add-subscription-button:active {
+  bottom: -4px;
+}
+
+.plan__add-subscription-button--shadow {
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+  background-color: var(--plan-bgcolor-secondary-3);
+
+  width: 185px;
+  height: 50px;
+
+  padding: 16px 24px;
+  border-radius: 500px;
+  z-index: 9;
+  color: blue;
+}
+
+.plan__background-box {
+  position: absolute;
+  top: -24px;
+  right: 24px;
+  width: 285px;
+  height: 326px;
+  border-radius: 14px;
+  z-index: -1;
+}
+
+.plans-container {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.plan__cost {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.plan__cost-container {
+  margin-top: 1rem;
+}
+
+.plan__title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ plan section end ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ buttons section start ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button {
+  /* padding: 16px 24px; */
+  padding: 14px 24px 18px 24px;
+  border-radius: 500px;
+}
+
+.see-all-subscriptions {
+  background-color: var(--text-color-primary);
+  color: var(--bg-color-primary);
+  font-size: 1rem;
+  border: none;
+  padding: 16px 24px;
+}
+
+.see-all-subscriptions:active {
+  background-color: var(--button-bgcolor-primary);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ buttons section end ~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
