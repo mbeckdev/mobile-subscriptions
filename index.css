@@ -1,10 +1,11 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~ css sections ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~  css sections  ~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/* ~~~~~~~~~ title and description section  ~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~ plans section  ~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~ buttons section  ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~  title and description section  ~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~  plans section  ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~  buttons section  ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  media query section  ~~~~~~~~~~~~~~~~~~~ */
 
 :root {
   --bg-color-primary: #f3f3f7;
@@ -43,15 +44,17 @@ button {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
   font-family: 'Merriweather', serif;
-  width: 550px;
   text-align: center;
+  font-size: 1.5rem;
+  width: 300px;
+  margin-top: 82px;
 }
 
 .subscriptions-description {
   text-align: center;
-  width: 700px;
-  font-size: 1.125rem;
   margin-top: 1.5rem;
+  width: 300px;
+  font-size: 1rem;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~ title and description section end ~~~~~~~~~~~ */
@@ -79,11 +82,20 @@ h1 {
   width: 285px;
   height: 326px;
   border-radius: 14px;
-  padding: 40px;
   font-size: 0.875rem;
 
   background-color: var(--plan-bgcolor-primary);
-  margin: 0 40px;
+  margin: 0 40px 3rem 40px;
+  padding: 1.5rem;
+}
+
+.plan,
+.plan__background-box {
+  width: 250px;
+}
+
+.plan:last-of-type {
+  margin-bottom: 0;
 }
 
 .plan__add-subscription-button-container {
@@ -126,16 +138,9 @@ h1 {
   position: absolute;
   top: -24px;
   right: 24px;
-  width: 285px;
   height: 326px;
   border-radius: 14px;
   z-index: -1;
-}
-
-.plans-container {
-  margin: 5rem 0;
-  display: flex;
-  justify-content: center;
 }
 
 .plan__cost {
@@ -152,6 +157,12 @@ h1 {
   font-size: 1.125rem;
 }
 
+.plans-container {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~ plan section end ~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -165,17 +176,79 @@ button {
   border-radius: 500px;
 }
 
-.see-all-subscriptions {
+.see-all-subscriptions-button {
   background-color: var(--text-color-primary);
   color: var(--bg-color-primary);
   font-size: 1rem;
   border: none;
   padding: 16px 24px;
+  margin-bottom: 4rem;
 }
 
-.see-all-subscriptions:active {
+.see-all-subscriptions-button:active {
   background-color: var(--button-bgcolor-primary);
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~ buttons section end ~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~ media query section start ~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    width: 400px;
+  }
+
+  .subscriptions-description {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+    width: 550px;
+  }
+
+  .plans-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: center;
+    width: 700px;
+  }
+
+  .subscriptions-description {
+    width: 700px;
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  h1 {
+    width: 550px;
+    font-size: 32px;
+  }
+
+  .plan {
+    padding: 40px;
+    margin: 0 40px;
+  }
+
+  .plans-container {
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .subscriptions-description {
+    width: 700px;
+    font-size: 1.125rem;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~ media query section end ~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
